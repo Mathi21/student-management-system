@@ -28,18 +28,18 @@ Requesting this url with **post** method is used to store students record in the
 
 **Input json format for student detail should be as follows**
 ```
-{      
-        "id" : "115",
-        "student_name" : "vijay kadhar S",
+  {      
+        "id" : "MAT900",
+        "student_name" : "vijay rose  S",
         "personal_information" : {
             "first_name" : "vijay",
-            "last_name" : "kadhar",
+            "last_name" : "rose",
             "initial" : "S",
             "identification_marks" : [
                 {
                     "location" : "near eyborws",
                     "identification_type" : "MOLE",
-                    "identification_marks_description" : ""
+                    "identification_marks_description" : "it is very small"
                 }
             ],
             "address_info" : {
@@ -47,8 +47,8 @@ Requesting this url with **post** method is used to store students record in the
                 "address_line_2" : "address line two goes here",
                 "address_line_3" : "address line three goes here",
                 "nationality" : "Indian",
-                "locality" : "",
-                "pincode" : "23232"
+                "locality" : "chennai",
+                "pincode" :23232
             },
             "fathers_name" : "fathers name",
             "mothers_name" : "mothers name",
@@ -58,7 +58,7 @@ Requesting this url with **post** method is used to store students record in the
         },
         "date_of_admission" : "2023-10-09T11:04:37Z",
         "month_of_admission" : "MAR"                    
-}
+  }
 ```
 Record will be created only if the id of new request is unique and the input field values are in the correct format.
 
@@ -93,15 +93,15 @@ Requesting this url with **post** is used to used to store subjects record in th
 
 **Input json format for subject detail should be as follows**
 ```
-    {
-        "subject_code": "MA18510",
+  {
+        "subject_code": "MAT510",
         "subject_name": "MATH",
         "min_mark": 0,
         "max_mark": 100,
         "pass_percentage" : 35,
         "board" : "STATE-BOARD",
         "standard_type" : "PRIMARY"
-    }
+  }
 ```
 Record will be created only if the subject code of new request is unique and the input field values are in the correct format.
 
@@ -136,11 +136,11 @@ Requesting this url with **post** is used to used to store teacher record in the
 **Input json format for teacher detail should be as follows**
 ```
     {
-        "teacher_id" : "T002",
+        "teacher_id" : "TEA002",
         "first_name" : "Amutha vel",
         "last_name" : "A",
         "gender" : "FEMALE",
-        "subjects" : ["1000","2000"],
+        "subjects" : ["SUB100","SUB200"],
         "qualification" : [
             {
                 "degree_type" : "Masters",
@@ -171,7 +171,7 @@ Requesting this url with **post** is used to used to store teacher record in the
                 }
             ]        
         }    
-    } 
+    }
 ```
 Record will be created only if the teacher_id of new request is unique and the input field values are in the correct format.
 
@@ -211,18 +211,18 @@ Requesting this url with **post** is used to used to store academic record of st
 **Input json format for academic_record detail should be as follows**
 ```
     {
-        "id" : "115",
+        "id" : "MAT115",
         "roll_number" : 115,
         "standard" : "XI",
         "section" : "B",
         "subjects" : [
             {
-                "subject_code" : "32b7b788",
-                "teacher_id" : "f219affa"                
+                "subject_code" : "SUB100",
+                "teacher_id" : "TEA002"                
             },
             {
-                "subject_code": "adfdf",
-                "teacher_id": "ateaklfd"
+                "subject_code": "SUB200",
+                "teacher_id": "TEA003"
             }                    
         ],
 
@@ -231,16 +231,16 @@ Requesting this url with **post** is used to used to store academic record of st
                 "exam_date" : "2023-10-09T11:04:37Z",
                 "marks" : [
                     {
-                        "subject_code" : "32b7b788",
+                        "subject_code" : "SUB100",
                         "obtained_mark" : 100,
                         "subject_result" : "PASS",
-                        "teacher_id" : "f219affa"
+                        "teacher_id" : "TEA002"
                     },
                     {
-                        "subject_code" : "32b7b788",
+                        "subject_code" : "SUB200",
                         "obtained_mark" : 10,
                         "subject_result" : "FAIL",
-                        "teacher_id" : "f219affa"
+                        "teacher_id" : "TEA003"
                     }
                 ],
                 "total" : 110,
@@ -284,27 +284,27 @@ Requesting this url with **put** method is used to update the exam details of th
 **Input json for updating exam details**
 ```
     {
-        "exam_date" : "2023-10-09T11:04:37Z",
-        "marks" : [
-            {
-                "subject_code" : "32b7b788",
-                "obtained_mark" : 100,
-                "subject_result" : "PASS",
-                "teacher_id" : "f219affa"
-            },
-            {
-                "subject_code" : "32b7b788",
-                "obtained_mark" : 10,
-                "subject_result" : "FAIL",
-                "teacher_id" : "f219affa"
-            }
-        ],
-        "total" : 110,
-        "average": 10.4,
-        "rank" : "U/A",
-        "result" : "FAIL",
-        "comments": "none"
-    }
+         "exam_date" : "2023-10-09T11:04:37Z",
+         "marks" : [
+                     {
+                        "subject_code" : "SUB100",
+                        "obtained_mark" : 100,
+                        "subject_result" : "PASS",
+                        "teacher_id" : "TEA002"
+                     },
+                     {
+                        "subject_code" : "SUB200",
+                        "obtained_mark" : 10,
+                        "subject_result" : "FAIL",
+                        "teacher_id" : "TEA003"
+                     }
+                   ],
+                        "total" : 110,
+                        "average": 10.4,
+                        "rank" : "U/A",
+                        "result" : "FAIL",
+                        "comments": "none"
+      }
 
 ```
 
