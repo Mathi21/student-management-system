@@ -12,7 +12,7 @@ It provides basic operations like creating, reading, updating and deleting the r
 ## Requirements 
 
 **Flask python framework** - Used to write api routes to access database.<br>
-**Flask-marshmallow** - Used for serialization and validation of input
+**Flask-marshmallow** - Used for serialization and validation of input. <br>
 **MongoDB database** - Used to store unstructured data or records.<br>
 **Pymongo** - Used to connect python-flask with MongoDB database.<br>
 
